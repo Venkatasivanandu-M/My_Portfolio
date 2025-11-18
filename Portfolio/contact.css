@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.main .box{
+    border: none;
+    height: 25vh;
+    width: 40vw;
+    margin-top: 8vw;
+    color: white;
+}
+.main .box img{
+    height: 25px;
+    margin-top: -5px;
+}
+
+.main .b1{
+    margin-top: 10vw;
+
+}
+
+.what {
+    display: flex;
+    align-items: center;
+    margin-top: 3vw;
+    gap: 10px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.what p a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.what p a:hover {
+    color: #ffffff;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    margin-top: 2vw;
+    gap: 10px;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.email p a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.email p a:hover {
+    color: #ffffff;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+button {
+    height: 5vh;
+    width: 9vw;
+    background: linear-gradient(45deg, #00f2ff, #ff06e2);
+    border: none;
+    border-radius: 25px;
+    margin-top: 2vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 242, 255, 0.2);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(0, 242, 255, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(0, 242, 255, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(0, 242, 255, 0.3); }
+}
+
+.main .b1 h1 {
+    background: linear-gradient(45deg, #00f2ff, #ff06e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+    animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.b2 input {
+    border: 2px solid transparent;
+    background: linear-gradient(#0f0f0f, #1a1a1a) padding-box, linear-gradient(45deg, #00f2ff, #ff06e2) border-box;
+    color: white;
+    height: 6vh;
+    width: 32vw;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    margin-top: 2vw;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInRight 1.6s ease-out;
+}
+
+.b2 input:focus {
+    border-color: #00f2ff;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.dwn {
+    color: white;
+}
+
+.b2 textarea {
+    border: 2px solid transparent;
+    background: linear-gradient(#0f0f0f, #1a1a1a) padding-box, linear-gradient(45deg, #00f2ff, #ff06e2) border-box;
+    color: white;
+    height: 20vh;
+    width: 32vw;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    margin-top: 2vw;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    resize: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInRight 1.8s ease-out;
+}
+
+.b2 textarea:focus {
+    border-color: #00f2ff;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.b2 button{
+    margin-left: 4vw;
+}
+
+@media screen and (max-width:900px){
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10vw;
+    }
+    .b2 input,.b2 textarea{
+    width: 80vw;
+    }
+    button{
+        width: 15vw;
+    }
+    .b2 button{
+    margin-left: -0.5px;
+}
+
+
+}
+
+@media screen and (max-width:590px){
+    .b2 input,.b2 textarea{
+    width: 80vw;
+    }
+    .main .box{
+        width: 60vw;
+    }
+    button{
+        width: 25vw;
+    }
+    .main .b1 h1{
+        font-size: 4vw;
+    }
+    
+
+}
+
+@media screen and (max-width:400px) {
+    .b2 input,.b2 textarea{
+    width: 80vw;
+    }
+    .main .box{
+        width: 60vw;
+    }
+    button{
+        width: 30vw;
+    }
+     .main .b1 h1{
+        font-size: 7vw;
+    }
+    
+}
+
+@media screen and (max-width:300px) {
+    .b2 input,.b2 textarea{
+    width: 90vw;
+    }
+    button{
+        width: 30vw;
+    }
+     .main .b1 h1{
+        font-size: 8vw;
+    }
+    
+}

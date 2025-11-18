@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="./img/portfolio (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./about.css">
+    <script>
+        function toggleContent(button) {
+            const hiddenContent = button.nextElementSibling;
+            if (hiddenContent.style.display === 'none') {
+                hiddenContent.style.display = 'block';
+                button.textContent = 'Read Less';
+            } else {
+                hiddenContent.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <p><a href="./index.html">Home</a></p>
+        <p><a href="./About.html">About</a></p>
+        <p><a href="./project.html">Projects</a></p>
+        <p><a href="./contact.html">Contact</a></p>
+    </div>
+
+    <div class="container">
+        <div class="box b1">
+            <img src="./img/about.jpeg" alt="">
+
+        </div>
+        <div class="box b2">
+            <h1>About me</h1>
+            <p>I’m a passionate and enthusiastic fresher eager to kickstart my career in web/Software development. I
+                have a
+                strong foundation in HTML, CSS, and JavaScript, which I’m constantly improving through practice and
+                small projects. Additionally, I’m familiar with Python and its fundamentals, allowing me to solve
+                problems and learn new technologies quickly.</p>
+
+            <div class="about">
+                <div class="skills">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                        <li>PYTHON</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="edu">
+                    <h4>Education</h4>
+                    <ul>
+                        <li>Bachelor's of Engineering - 2025</li>
+                        <li>Intermediate - 2021</li>
+                        <li>Secondary School - 2018</li>
+                    </ul>
+                </div>
+                <div class="exp">
+                    <h4>Experience</h4>
+                    <p>Web developer - Intern</p>
+                    <p>Unified Mentor (Dec 2024 - Feb 2025)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./project.css">
+    <script>
+        function toggleContent(button) {
+            const hiddenContent = button.nextElementSibling;
+            if (hiddenContent.style.display === 'none') {
+                hiddenContent.style.display = 'block';
+                button.textContent = 'Read Less';
+            } else {
+                hiddenContent.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <p><a href="./index.html">Home</a></p>
+        <p><a href="./About.html">About</a></p>
+        <p><a href="./project.html">Projects</a></p>
+        <p><a href="./contact.html">Contact</a></p>
+    </div>
+    <h1>Projects</h1>
+    <div class="projects">
+        <div class="box b1">
+            <h2 class="project-title">TASK MANAGEMENT SYSTEM</h2>
+            <p class="project-skills">Django, HTML, CSS, SQLite</p>
+            <p class="project-date">NOVEMBER 2025</p>
+            <ul>
+                <li>Developed a full-stack Task Management System using Django (MVT), implementing functionalities to add, view, update, and delete tasks.</li>
+                <li>Built a soft delete feature by moving deleted tasks into a History module using a separate DeletedTasks model for data persistence.</li>
+                <li>Designed a clean and structured UI using HTML, CSS, and Django template inheritance (base.html, nav.html).</li>
+                <li>Utilized SQLite database for backend storage and handled form submissions, context passing, and debugging issues like URL routing and NoReverseMatch errors.</li>
+            </ul>
+        </div>
+        <div class="box b2">
+            <h2 class="project-title">ANTI-POACHING ALERT SYSTEM</h2>
+            <p class="project-skills">Arduino Programming, IoT Devices and Sensors</p>
+            <p class="project-date">October 2024</p>
+            <ul>
+                <li>Created an IoT-based Anti-Poaching System to protect trees like sandalwood and teak.</li>
+                <li>Built a wireless sensor node using Arduino Uno and ESP32 Camera for real-time monitoring.</li>
+                <li>Used sensors (accelerometer, smoke, sound) to detect illegal activities and forest fires.</li>
+                <li>Stored sensor data in the cloud for remote access and monitoring.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

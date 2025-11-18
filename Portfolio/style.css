@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3vw;
+    margin-right: 10vw;
+    margin-top: 3vh;
+}
+
+.header p a {
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+
+.header p a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: sandybrown;
+    transition: width 0.4s ease;
+    transition-delay: 0.4s; /* Delayed appearance */
+}
+
+/* Hover Effects */
+.header p:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header p a:hover {
+    color: sandybrown;
+}
+
+.header p a:hover::after {
+    width: 100%;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    height: 80vh;
+    margin-top: 5vh;
+}
+
+.content .box {
+    border: none;
+}
+
+.content .b1 {
+    height: 50vh;
+    width: 57vw;
+    margin-top: 10vh;
+}
+
+.content .b2 {
+    border-radius: 100%;
+    border: 2px solid transparent;
+    background: linear-gradient(#00f2ff, #ff06e2) border-box;
+    width: 20.5vw;
+    height: 42.5vh;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.content .b2 img {
+    height: 42vh;
+    width: 20vw;
+    display: block;
+    margin: auto;
+    margin-top: 1px;
+    border: none;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content .b2 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(255, 6, 226, 0.2);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px rgba(0, 242, 255, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(0, 242, 255, 0.6); }
+    100% { box-shadow: 0 0 20px rgba(0, 242, 255, 0.3); }
+}
+
+.content .b1 h2 {
+    margin-top: 0.7vw;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    animation: slideInLeft 1s ease-out;
+}
+
+.content .b1 .name {
+    background: linear-gradient(45deg, #00f2ff, #ff06e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    animation: slideInLeft 1.2s ease-out;
+}
+
+.content .b1 p {
+    margin-top: 0.8vw;
+    font-weight: 300;
+    font-size: large;
+    color: #cccccc;
+    line-height: 1.6;
+    animation: slideInLeft 1.4s ease-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.icons{
+    margin-top: 10px;
+}
+.icons a img{
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+}
+.icons a img:hover{
+    transform: scale(1.1);
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 900px) {
+    .header {
+        justify-content: center;
+        gap: 5vw;
+        margin-right: 0;
+    }
+
+    .header p a {
+        font-size: medium;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5vh;
+        height: auto;
+        margin-bottom: 5vh;
+    }
+
+    .content .b1 {
+        width: 80vw;
+        height: auto;
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .content .b2 {
+        width: 38.5vw;
+        height: 38.5vw;
+    }
+
+    .content .b2 img {
+        width: 38vw;
+        height: 38vw;
+        margin-top: 0;
+    }
+
+    .icons a img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header p a {
+        font-size: small;
+    }
+
+    .content .b1 {
+        width: 90vw;
+        margin-top: 5vh;
+    }
+
+    .content .b1 p {
+        font-size: medium;
+    }
+
+    .content .b2 {
+         width: 58.5vw;
+        height: 58.5vw;
+    }
+
+    .content .b2 img {
+        width: 58vw;
+        height: 58vw;
+    }
+
+    .icons a img {
+        height: 25px;
+        width: 25px;
+    }
+}

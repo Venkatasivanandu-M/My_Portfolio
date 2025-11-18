@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 8vw;
+    padding: 2rem;
+}
+.container .box{
+   border: none;
+   margin-top: 8vw;
+}
+.container .b1{
+    height: 40vh;
+    width: 20vw;
+    margin-top: 8vw;
+}
+
+.container .b2{
+    height: 50vh;
+    width: 52vw;
+    margin-left: 5vw;
+    margin-top: 10vw;
+    color: white;
+}
+.container .b1 img {
+    height: 40vh;
+    width: 20vw;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(#00f2ff, #ff06e2) border-box;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .b1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(255, 6, 226, 0.2);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(0, 242, 255, 0.2); }
+    50% { box-shadow: 0 0 15px rgba(0, 242, 255, 0.4); }
+    100% { box-shadow: 0 0 10px rgba(0, 242, 255, 0.2); }
+}
+
+.container .b2 h1 {
+    margin-top: 5px;
+    background: linear-gradient(45deg, #00f2ff, #ff06e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    animation: slideInRight 1s ease-out;
+}
+
+.container .b2 h1:hover {
+    text-decoration: underline rgba(255, 252, 252, 0.5) 2px;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.container .b2 p {
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 300;
+    color: #cccccc;
+    line-height: 1.6;
+    animation: slideInRight 1.2s ease-out;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.about {
+    display: flex;
+    gap: 5vw;
+    margin-top: 1vw;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h4 {
+    background: linear-gradient(45deg, #00f2ff, #ff06e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: large;
+    font-weight: 600;
+    text-decoration: underline rgba(255, 252, 252, 0.5) 2px;
+    margin-bottom: 1rem;
+}
+
+.about ul {
+    list-style-position: outside;
+    padding-left: 1rem;
+}
+
+.about ul li {
+    margin-top: 5px;
+    color: #cccccc;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.about ul li:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+.read-more {
+    background: linear-gradient(45deg, #00f2ff, #ff06e2);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 242, 255, 0.2);
+}
+
+.hidden-content {
+    margin-top: 10px;
+    color: #cccccc;
+    line-height: 1.6;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.about .edu ul li {
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .container .b1 {
+        width: 40vw;
+        height: 40vw;
+        margin-top: 5vh;
+    }
+
+    .container .b1 img {
+        width: 38vw;
+        height: 38vw;
+    }
+
+    .container .b2 {
+        width: 80vw;
+        margin-left: 0;
+        margin-top: 5vh;
+        height: auto;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+        margin-top: 5vh;
+    }
+
+    .about ul {
+        padding: 0;
+        list-style-type: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .b1 {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .container .b1 img {
+        width: 58vw;
+        height: 58vw;
+    }
+
+    .container .b2 p {
+        font-size: medium;
+    }
+
+    .about {
+        gap: 3vh;
+    }
+
+    .about ul li {
+        margin-top: 5px;
+        font-size: small;
+    }
+}
